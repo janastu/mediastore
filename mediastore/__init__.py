@@ -1,0 +1,1 @@
+from .mediastore import app

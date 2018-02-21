@@ -1,0 +1,16 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<div>
+    <img src="{{ user.avatar_url }}" style="width: 32px; height: 32px">
+    <div>Authorized github user: {{ user.login }}</div>
+    <div>Session: {{ session['access_token'] }}</div>
+</div>
+<script>
+  window.addEventListener("message", function(event) {
+      //TODO - check event.source for domain - for cross-domain attacks
+      var auth = {{ 'false' if error else 'true' }}
+      event.source.postMessage(auth, '*');
+  }, false);
+</script>
+{% endblock %}
