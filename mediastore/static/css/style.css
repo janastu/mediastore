@@ -1,0 +1,39 @@
+.login {
+    position: absolute;
+    float: right;
+    right: 0px;
+    top: 0px;
+}
+
+.login .userinfo {
+    text-align: center;
+}
+
+.login img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    margin-top: 18rem;
+}
+
+#main {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.buttons {
+    font-size: 10rem;
+    text-align: center;
+}
+
+.controls {
+   text-align: center; 
+}
+
+.controls span {
+    display: table;
+    margin: 0 auto;
+}

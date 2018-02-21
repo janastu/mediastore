@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <title>MediaStore Server</title>
+     {% block head %}
+      <link media="all" rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}">
+      <link media="all" rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css')}}">
+      <link media="all" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+      <link media="all" rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic.css')}}">
+     {% endblock %}
+ </head>
+ <body>
+    {% block content %}
+
+    {% endblock %}
+ </body>
+</html>

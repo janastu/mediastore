@@ -1,0 +1,56 @@
+{% extends 'default.html' %}
+
+{% block content %}
+{% if access_token is not none %}
+<div class="login">
+    <img class="userprofile" src="{{ info.data.avatar_url }}" width="32" height="32">
+    <div class="userinfo">
+      github: {{ info.data.login }}
+    </div>
+</div>
+{% else %}
+<div class="login">
+    <a href="{{ url_for('login') }}"><img src="{{ url_for('static', filename='images/auth-me-github.png') }}"></a>
+</div>
+{% endif %}
+
+<div class="container">
+    <section class="header">
+        <div id="main">
+          <h1>MediaStore</h1>
+          record and store audio/video streams right from your browser.
+        </div>
+    </section>
+    {% if access_token is not none %}
+    <div class="row">
+        <div class="five columns">
+        &nbsp;
+        </div>
+        <div class="two columns controls">
+          <span id="record" class="oi buttons" data-glyph="microphone" title="Microphone" aria-hidden="true"></span>
+          <span id="stop" class="oi buttons" data-glyph="media-stop" title="Stop" aria-hidden="true" style="display: none"></span>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/recorder.js')}}"></script>
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+<script>
+(function() {
+  var record = document.getElementById("record");
+  var stop = document.getElementById("stop");
+  record.onclick = function(e) {
+    record.style.display = "none";
+    stop.style.display = "block";
+    startRecording();
+  };
+  stop.onclick = function(e) {
+    record.style.display = "block";
+    stop.style.display = "none";
+    stopRecording();
+  }
+})();
+</script>
+{% endblock %}
