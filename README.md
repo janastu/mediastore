@@ -9,6 +9,10 @@ Install in a virtual environment
   $ pip install -r requirements.txt
 
 
+Copy mediastore/config_example.yaml to mediastore/config.yaml. Place corresponding keys to Github app in config file.
+
+Run
+
   $ python main.py
 
 # To-do
