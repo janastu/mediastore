@@ -1,4 +1,5 @@
 mediastore/uploads/*
+mediastore/config.yaml
 
 !mediastore/uploads/.gitkeep
 ### OSX ###

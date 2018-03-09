@@ -1,0 +1,7 @@
+#SECRET_KEY: abcdefg123456 
+SQLALCHEMY_DATABASE_URI: sqlite3://./users.db
+GITHUB_CONSUMER_KEY: xxxx
+GITHUB_CONSUMER_SECRET: xxxx
+DEBUG: True
+UPLOAD_FOLDER: mediastore/uploads
+
